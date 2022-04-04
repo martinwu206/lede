@@ -140,7 +140,7 @@ jobs:
           file_glob: true
 
       - name: add plugin
-        run: |
+        run: 
           cd package
           mkdir openwrt-packages
           cd openwrt-packages
@@ -148,7 +148,7 @@ jobs:
           git clone https://github.com/tzxiaozhen88/luci-app-koolproxyR.git
           git clone https://github.com/rosywrt/luci-theme-rosy.git
           
-           # 常用LuCI插件选择:
+         # 常用LuCI插件选择:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-app-adbyby-plus=y
           CONFIG_PACKAGE_luci-app-aria2=y
@@ -174,7 +174,6 @@ jobs:
           CONFIG_PACKAGE_luci-app-koolproxyR=y
           EOF
 
-# 我在末尾添加了两个主题，是我比较喜欢的
           # LuCI主题:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-theme-argon=y
